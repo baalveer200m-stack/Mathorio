@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Math Battle AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #020617;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #0f172a;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  width: 320px;
+}
+
+#question {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  font-size: 18px;
+  width: 80%;
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #16a34a;
+}
+
+select {
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+#result {
+  height: 20px;
+  margin-top: 10px;
+}
+
+.red {
+  color: red;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>⚔️ Math Battle vs AI 🤖</h2>
+
+  <div class="top">
+    <div>❤️ Lives: <span id="lives">3</span></div>
+    <div>⏱ <span id="timer">10</span>s</div>
+  </div>
+
+  <div style="margin-top:10px;">
+    🧑 You: <span id="score">0</span> |
+    🤖 AI: <span id="aiScore">0</span>
+  </div>
+
+  <select id="mode">
+    <option value="easy">Easy</option>
+    <option value="normal">Normal</option>
+    <option value="hard">Hard</option>
+  </select>
+
+  <div id="question">...</div>
+
+  <input type="number" id="answer" placeholder="Answer">
+  <br>
+  <button onclick="checkAnswer()">Submit</button>
+
+  <div id="result"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
